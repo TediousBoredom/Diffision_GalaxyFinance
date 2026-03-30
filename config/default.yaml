@@ -1,0 +1,20 @@
+data:
+  n_samples: 10000
+  seq_len: 60
+  seed: 42
+
+model:
+  num_steps: 1000
+  schedule_type: "cosine"
+
+training:
+  batch_size: 32
+  num_workers: 4
+  learning_rate: 1.0e-4
+  weight_decay: 1.0e-5
+  num_epochs: 100
+  save_path: "checkpoints/model.pt"
+
+inference:
+  num_scenarios: 10
+  num_steps: 100
